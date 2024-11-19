@@ -9,7 +9,7 @@ public class GarmentManagement {
 
         Scanner input = new Scanner(System.in);
 
-        // Fabric input
+        
         System.out.print("Enter Fabric Code: ");
         String fabricCode = input.nextLine();
         System.out.print("Enter Fabric Category: ");
@@ -21,10 +21,10 @@ public class GarmentManagement {
         System.out.println("================================");
         input.nextLine();
 
-        // Create Fabric instance
+        
         Material material = new Material(fabricCode, fabricCategory, fabricShade, costPerMeter);
 
-        // Garment input
+        
         System.out.print("Enter Garment Code: ");
         String garmentCode = input.nextLine();
         System.out.print("Enter Garment Title: ");
@@ -42,10 +42,10 @@ public class GarmentManagement {
         System.out.println("================================");
         input.nextLine();
 
-        // Create Garment instance
+        
         Apparel apparel = new Apparel(garmentCode, garmentTitle, garmentDetails, garmentSize, garmentColor, garmentPrice, availableStock, material);
 
-        // Customer input
+        
         System.out.print("Enter Buyer ID: ");
         String buyerId = input.nextLine();
         System.out.print("Enter Buyer Name: ");
@@ -56,10 +56,10 @@ public class GarmentManagement {
         String buyerPhone = input.nextLine();
         System.out.println("================================");
 
-        // Create Customer instance
+        
         Buyer buyer = new Buyer(buyerId, buyerName, buyerEmail, buyerPhone);
 
-        // Order processing
+        
         System.out.print("Enter Transaction ID: ");
         String transactionId = input.nextLine();
         Date transactionDate = new Date();
@@ -73,7 +73,7 @@ public class GarmentManagement {
     }
 }
 
-// Apparel class
+
 class Apparel {
     public String code;
     public String title;
@@ -104,7 +104,7 @@ class Apparel {
     }
 }
 
-// Material class
+
 class Material {
     public String code;
     public String category;
@@ -122,7 +122,7 @@ class Material {
     }
 }
 
-// Buyer class
+
 class Buyer {
     public String id;
     public String name;
@@ -148,7 +148,7 @@ class Buyer {
     }
 }
 
-// Purchase class
+
 class Purchase {
     public String transactionId;
     public Date transactionDate;
